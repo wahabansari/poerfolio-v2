@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import MouseGlow from "@/components/MouseGlow";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const inter = Inter({
   subsets: ["latin"],
@@ -26,6 +27,7 @@ export default function RootLayout({
         <div className="bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900">
           {children}
         </div>
+        <SpeedInsights />
       </body>
     </html>
   );
